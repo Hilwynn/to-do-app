@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  padding: 20px;
+}
+
+.todo-form {
+  
+}
+
+.form-input {
+  
+}
+
+.submit-button {
+  
+}
+
+.list-wrapper {
+  
+}
+
+.list-group {
+  list-style: none;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.list-group-item {
+  border: 1px solid blue;
+  border-bottom: none;
+  height: 35px;
+  position: relative;
+  &:last-child {
+    border-bottom: 1px solid blue;
+  }
+  .done, .not-done {
+    position: relative;
+  }
+  .checkmark {
+    background-color: inherit;
+    border: 2px solid;
+    border-radius: 50%;
+    color: rgba(255,255,255,0.7);
+    height: 22px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 22px;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  .item-name {
+    position: absolute;
+    left: 35px;
+    top: 7px;
+  }
+  .close {
+    background-color: inherit;
+    border: none;
+    color: gray;
+    font-size: 30px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+  }
+}
+
+.done {
+  color: blue;
+  .checkmark {
+    border-color: blue;
+    &:after {
+      border: solid blue;
+      border-width: 0 2.5px 3px 0;
+      display: block;
+      height: 10px;
+      left: 6px;
+      top: 3px;
+      transform: rotate(45deg);
+      width: 6px;
+    }
+  }
+  .item-name {
+    text-decoration: line-through;
+  }
+}
+
+.not-done {
+  color: red;
+  .checkmark {
+    border-color: red;
+  }
+}
