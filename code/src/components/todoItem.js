@@ -24,7 +24,7 @@ class TodoItem extends React.Component {
             onClick={this.onClickDone}
             onKeyPress={this.onClickDone}
             role="checkbox">
-            <span className="checkmark" tabIndex="0" />
+            <span className="checkbox" tabIndex="0" />
             <p className="item-name">{value}</p>
           </div>
           <button type="button" className="close" onClick={this.onClickClose}>&times;</button>

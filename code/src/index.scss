@@ -1,9 +1,20 @@
+@import "colors.scss";
+
 html {
   box-sizing: border-box;
 }
 
+body, button, input {
+  font-family: Helvetica, sans-serif;
+}
+
 body {
-  font-family: sans-serif;
+  background-color: $background-color;
+  color: $black;
+}
+
+button, .checkbox, .item-name {
+  cursor: pointer;
 }
 
 *,
@@ -15,23 +26,31 @@ body {
 }
 
 .page-wrapper {
+  margin: 50px auto;
   padding: 20px;
 }
 
 .todo-form {
-  
+  position: relative;
 }
 
 .form-input {
-  
+  border: 1px solid $gray;
+  height: 45px;
+  padding-left: 10px;
+  width: 100%;
 }
 
 .submit-button {
-  
-}
-
-.list-wrapper {
-  
+  background-color: $main-color;
+  border: none;
+  border-radius: 2px;
+  color: $white;
+  height: 29px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 55px;
 }
 
 .list-group {
@@ -41,21 +60,21 @@ body {
 }
 
 .list-group-item {
-  border: 1px solid blue;
+  background-color: $white;
+  border: 1px solid $gray;
   border-bottom: none;
   height: 35px;
   position: relative;
   &:last-child {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid $gray;
   }
   .done, .not-done {
     position: relative;
   }
-  .checkmark {
+  .checkbox {
     background-color: inherit;
     border: 2px solid;
     border-radius: 50%;
-    color: rgba(255,255,255,0.7);
     height: 22px;
     left: 5px;
     position: absolute;
@@ -75,20 +94,22 @@ body {
   .close {
     background-color: inherit;
     border: none;
-    color: gray;
+    color: $gray;
     font-size: 30px;
+    height: 15px;
     position: absolute;
-    right: 5px;
-    top: 0;
+    right: 10px;
+    top: 1px;
   }
 }
 
 .done {
-  color: blue;
-  .checkmark {
-    border-color: blue;
+  color: $gray;
+  .checkbox {
+    background-color: $accent-color;
+    border-color: $accent-color;
     &:after {
-      border: solid blue;
+      border: solid $white;
       border-width: 0 2.5px 3px 0;
       display: block;
       height: 10px;
@@ -104,8 +125,9 @@ body {
 }
 
 .not-done {
-  color: red;
-  .checkmark {
-    border-color: red;
+  .checkbox {
+    border-color: $gray;
   }
 }
+
+@import "mediaqueries.scss";

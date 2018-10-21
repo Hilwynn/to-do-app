@@ -45,13 +45,10 @@ class App extends React.Component {
     return (
       <div className="page-wrapper">
         <TodoForm addItem={this.addItem} />
-        <div className="list-wrapper">
-          <TodoList
-            items={this.props.initItems}
-            removeItem={this.removeItem}
-            markTodoDone={this.markTodoDone}
-            todoItems={todoItems} />
-        </div>
+        <TodoList
+          removeItem={this.removeItem}
+          markTodoDone={this.markTodoDone}
+          todoItems={todoItems} />
       </div>
     )
   }
