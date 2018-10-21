@@ -3,4 +3,10 @@
     margin: 100px auto;
     width: 550px;
   }
+  .submit-button:hover {
+    background-color: $accent-color;
+  }
+  .close:hover {
+    color: $black;
+  }
 }
