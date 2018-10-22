@@ -18,7 +18,7 @@ class TodoItem extends React.Component {
       <li className="list-group-item">
         <div className={done ? "done" : "not-done"}>
           <div
-            aria-checked={done ? "unchecked" : "checked"}
+            aria-checked={done ? "checked" : "unchecked"}
             className="item-check"
             id="check-item"
             onClick={this.onClickDone}
