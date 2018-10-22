@@ -51,52 +51,57 @@ button, .checkbox, .item-name {
   }
 }
 
+.no-tasks-message {
+  color: $gray;
+  padding-top: 30px;
+  text-align: center;
+}
+
 .list-group {
   list-style: none;
   margin-top: 20px;
   width: 100%;
-}
-
-.list-group-item {
-  background-color: $white;
-  border: 1px solid $gray;
-  border-bottom: none;
-  position: relative;
-  &:last-child {
-    border-bottom: 1px solid $gray;
-  }
-  .done, .not-done {
+  .list-group-item {
+    background-color: $white;
+    border: 1px solid $gray;
+    border-bottom: none;
     position: relative;
-  }
-  .checkbox {
-    background-color: inherit;
-    border: 2px solid;
-    border-radius: 50%;
-    height: 22px;
-    left: 5px;
-    position: absolute;
-    top: 7px;
-    width: 22px;
-    &:after {
-      content: "";
-      position: absolute;
-      display: none;
+    &:last-child {
+      border-bottom: 1px solid $gray;
     }
-  }
-  .item-name {
-    font-size: 14px;
-    padding: 10px 40px 10px 35px;
-  }
-  .close {
-    background-color: inherit;
-    border: none;
-    color: $gray;
-    font-size: 30px;
-    height: 15px;
-    position: absolute;
-    right: 10px;
-    top: 20%;
-    top: 2px;
+    .done, .not-done {
+      position: relative;
+    }
+    .checkbox {
+      background-color: inherit;
+      border: 2px solid;
+      border-radius: 50%;
+      height: 22px;
+      left: 5px;
+      position: absolute;
+      top: 7px;
+      width: 22px;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+    .item-name {
+      font-size: 14px;
+      padding: 10px 40px 10px 35px;
+    }
+    .close {
+      background-color: inherit;
+      border: none;
+      color: $gray;
+      font-size: 30px;
+      height: 15px;
+      position: absolute;
+      right: 10px;
+      top: 20%;
+      top: 2px;
+    }
   }
 }
 
