@@ -21,11 +21,11 @@ class App extends React.Component {
       todoItems: JSON.parse(localStorage.getItem("storedTodoList"))
     })
   }
-  
+
   saveToLocalStorage = () => {
     const dataToStore = JSON.stringify(this.state.todoItems)
-      localStorage.setItem("storedTodoList", dataToStore)
-    }
+    localStorage.setItem("storedTodoList", dataToStore)
+  }
 
   addItem = (todoItem) => {
     const { todoItems } = this.state
