@@ -62,7 +62,7 @@ class App extends React.Component {
     return (
       <div className="page-wrapper">
         <TodoForm addItem={this.addItem} />
-        {(!this.state.todoItems.length) && <div className="no-tasks-message"><p>Go ahead and add your first task!</p></div>}
+        {(!this.state.todoItems.length) && <div className="no-tasks-message"><p>What do you have to do today?</p></div>}
         <TodoList
           removeItem={this.removeItem}
           markTodoDone={this.markTodoDone}
