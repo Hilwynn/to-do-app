@@ -29,6 +29,7 @@ class TodoForm extends React.Component {
         ref={this.form}>
         <input
           className="form-input"
+          name="add-task"
           ref={this.itemName}
           placeholder="New task..."
           type="text" />
