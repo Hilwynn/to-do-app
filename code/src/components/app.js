@@ -10,6 +10,23 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    if (localStorage.getItem("storedTodoList")) {
+      this.fetchLocalStorage()
+    }
+  }
+
+  fetchLocalStorage = () => {
+    this.setState({
+      todoItems: JSON.parse(localStorage.getItem("storedTodoList"))
+    })
+  }
+  
+  saveToLocalStorage = () => {
+    const dataToStore = JSON.stringify(this.state.todoItems)
+      localStorage.setItem("storedTodoList", dataToStore)
+    }
+
   addItem = (todoItem) => {
     const { todoItems } = this.state
     todoItems.unshift({
@@ -17,13 +34,13 @@ class App extends React.Component {
       value: todoItem.newItemValue,
       done: false
     })
-    this.setState({ todoItems })
+    this.setState({ todoItems }, this.saveToLocalStorage)
   }
 
   removeItem = (itemIndex) => {
     const { todoItems } = this.state
     todoItems.splice(itemIndex, 1)
-    this.setState({ todoItems })
+    this.setState({ todoItems }, this.saveToLocalStorage)
   }
 
   markTodoDone = (itemIndex) => {
@@ -36,7 +53,7 @@ class App extends React.Component {
     } else {
       todoItems.unshift(todo)
     }
-    this.setState({ todoItems })
+    this.setState({ todoItems }, this.saveToLocalStorage)
   }
 
   render() {
