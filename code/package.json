@@ -2,7 +2,7 @@
   "name": "react-starter",
   "version": "1.2.2",
   "private": true,
-  "homepage": "https://hilwynn.github.io/todo-app",
+  "homepage": "https://hilwynn.github.io/to-do-app",
   "dependencies": {
     "eslint-config-technigo": "^1.4.0",
     "gh-pages": "^2.0.1",
