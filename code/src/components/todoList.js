@@ -9,7 +9,7 @@ class TodoList extends React.Component {
         <TodoItem
           done={item.done}
           index={index}
-          key={item.value}
+          key={item.index}
           markTodoDone={this.props.markTodoDone}
           removeItem={this.props.removeItem}
           value={item.value} />
