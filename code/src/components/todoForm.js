@@ -27,9 +27,12 @@ class TodoForm extends React.Component {
         className="todo-form"
         onSubmit={this.onSubmit}
         ref={this.form}>
+        <label htmlFor="add-task" className="screen-reader-only">
+          Add a new task to the list
+        </label>
         <input
           className="form-input"
-          name="add-task"
+          id="add-task"
           ref={this.itemName}
           placeholder="New task..."
           type="text" />
